@@ -1,22 +1,42 @@
 # westquant-bridges
 
-Wave 5 bridge package for secondary SDKs and common quantum IRs.
+Experimental framework and IR bridges for WestQuant Open.
 
-Implemented bridge surfaces:
+## Support Matrix
 
-- Cirq: circuit import, target-gateset compilation, small-unitary verification,
-  sequential target-gateset/pass search.
-- Qibo: circuit import, custom pipeline execution and transpiler assertion hook.
-- D-Wave Ocean: BQM import, embedding/sample controls, chain-break/energy metrics,
-  embedding search.
-- Amazon Braket: circuit import, OpenQASM `Program`, local simulation.
-- CUDA-Q: program representation plus `cudaq-opt` external MLIR plugin command
-  bridge. Native plugin compilation remains toolchain-version-coupled.
-- Bloqade: analog program/geometry builder passthrough.
-- Microsoft QDK: OpenQASM resource estimation and resource-result import.
-- OpenQASM 3.1: dependency-free static representation/metrics and Braket
-  verbatim-box helper.
-- QIR: dependency-free LLVM/QIR static representation/metrics.
+| Bridge | Status | Description |
+|--------|--------|-------------|
+| Cirq | EXPERIMENTAL | Circuit import, target-gateset compilation, verification |
+| Qibo | EXPERIMENTAL | Circuit import, custom pipeline execution |
+| D-Wave Ocean | EXPERIMENTAL | BQM import, embedding/sample controls |
+| Amazon Braket | EXPERIMENTAL | Circuit import, OpenQASM Program, local simulation |
+| CUDA-Q | EXPERIMENTAL | Program representation, cudaq-opt bridge |
+| Bloqade | EXPERIMENTAL | Analog program/geometry builder passthrough |
+| Microsoft QDK | EXPERIMENTAL | OpenQASM resource estimation |
+| OpenQASM 3.1 | STATIC | Dependency-free static representation/metrics |
+| QIR | STATIC | Dependency-free LLVM/QIR static representation/metrics |
+
+**Note:** All SDK-backed bridges are currently EXPERIMENTAL. They have
+fake/stub tests only, not native SDK tests. Do not rely on them for
+production use yet.
+
+The four primary frameworks (Qiskit, pytket, PennyLane, Pulser) are
+SDK_TESTED and available as separate packages:
+
+- `pip install westquant[qiskit]`
+- `pip install westquant[pytket]`
+- `pip install westquant[pennylane]`
+- `pip install westquant[pulser]`
+
+## Installation
+
+```bash
+pip install westquant-bridges
+```
 
 Every external SDK import is lazy so installing WestQuant bridges does not force
 all quantum SDKs into one Python environment.
+
+## License
+
+Apache-2.0
