@@ -13,3 +13,5 @@ __all__=["BridgeStatus","CirqBridge","QiboBridge","OceanBridge","BraketBridge","
 
 from .search import CirqSearchSpace, CirqSequentialSearch, OceanSearchSpace, OceanEmbeddingSearch, QDKResourceSearch
 __all__ += ["CirqSearchSpace","CirqSequentialSearch","OceanSearchSpace","OceanEmbeddingSearch","QDKResourceSearch"]
+
+__version__ = "0.1.0a1"
