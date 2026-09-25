@@ -14,4 +14,27 @@ __all__=["BridgeStatus","CirqBridge","QiboBridge","OceanBridge","BraketBridge","
 from .search import CirqSearchSpace, CirqSequentialSearch, OceanSearchSpace, OceanEmbeddingSearch, QDKResourceSearch
 __all__ += ["CirqSearchSpace","CirqSequentialSearch","OceanSearchSpace","OceanEmbeddingSearch","QDKResourceSearch"]
 
+from .benchmarks import (
+    grover_circuit_qiskit,
+    grover_circuit_cirq,
+    qft_circuit_qiskit,
+    qft_circuit_cirq,
+    ghz_circuit_qiskit,
+    ghz_circuit_cirq,
+    list_benchmarks,
+    get_benchmark,
+    BENCHMARKS,
+)
+__all__ += [
+    "grover_circuit_qiskit",
+    "grover_circuit_cirq",
+    "qft_circuit_qiskit",
+    "qft_circuit_cirq",
+    "ghz_circuit_qiskit",
+    "ghz_circuit_cirq",
+    "list_benchmarks",
+    "get_benchmark",
+    "BENCHMARKS",
+]
+
 __version__ = "0.1.0a1"
