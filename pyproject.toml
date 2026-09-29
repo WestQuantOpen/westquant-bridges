@@ -4,12 +4,12 @@ build-backend="setuptools.build_meta"
 
 [project]
 name="westquant-bridges"
-version="0.1.0a2"
+version="0.1.1"
 readme = "README.md"
 description="Experimental framework and IR bridges for WestQuant Open"
 requires-python=">=3.10"
-license={text="Apache-2.0"}
-dependencies=["westquant-core>=0.2.0a1"]
+license="Apache-2.0"
+dependencies=["westquant-core>=0.2.1"]
 
 [project.urls]
 Homepage = "https://github.com/WestQuantOpen"
@@ -22,6 +22,7 @@ braket=["amazon-braket-sdk>=1"]
 ocean=["dwave-system>=1"]
 qdk=["qdk>=1"]
 bloqade=["bloqade>=0.2"]
+cudaq=["westquant-cudaq>=0.1.0"]
 test=["pytest>=8"]
 
 [tool.setuptools.packages.find]

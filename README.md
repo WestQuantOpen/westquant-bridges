@@ -10,7 +10,7 @@ Experimental framework and IR bridges for WestQuant Open.
 | Qibo | EXPERIMENTAL | Circuit import, custom pipeline execution |
 | D-Wave Ocean | EXPERIMENTAL | BQM import, embedding/sample controls |
 | Amazon Braket | EXPERIMENTAL | Circuit import, OpenQASM Program, local simulation |
-| CUDA-Q | EXPERIMENTAL | Program representation, cudaq-opt bridge |
+| CUDA-Q | EXPERIMENTAL | Program representation, normalized workload profiles, execution hints, cudaq-opt bridge |
 | Bloqade | EXPERIMENTAL | Analog program/geometry builder passthrough |
 | Microsoft QDK | EXPERIMENTAL | OpenQASM resource estimation |
 | OpenQASM 3.1 | STATIC | Dependency-free static representation/metrics |
@@ -36,6 +36,15 @@ pip install westquant-bridges
 
 Every external SDK import is lazy so installing WestQuant bridges does not force
 all quantum SDKs into one Python environment.
+
+For representation-aware CUDA-Q execution planning:
+
+```bash
+pip install 'westquant-bridges[cudaq]'
+```
+
+The optional extra integrates with `westquant-cudaq`; it contains no
+industry-specific workflow logic.
 
 ## License
 
